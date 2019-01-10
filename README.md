@@ -14,3 +14,10 @@ Mappings for Vim:
 
     nnoremap Q Vip:!pdftextfmt<CR>gqq
     vnoremap Q :!pdftextfmt<CR>gqq
+
+In Bash I like the following:
+
+```bash
+# Filter clipboard: clean linebreaks in copied text
+alias fclip='xclip -selection c -o | pdftextfmt | xclip -selection c'
+```
