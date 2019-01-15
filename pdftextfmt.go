@@ -26,5 +26,5 @@ func main() {
 
 		result += text
 	}
-	fmt.Println(strings.TrimSpace(result))
+	fmt.Print(strings.TrimSpace(result))
 }
