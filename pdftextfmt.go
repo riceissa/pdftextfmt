@@ -22,7 +22,7 @@ func main() {
 		// this as part of a word so join it with the following line.
 		// An example would be something like ["mathe", "-",
 		// "matician"].
-		matched, _ := regexp.MatchString("^[[:space:]]*-[[:space:]]*$", text)
+		matched, _ := regexp.MatchString("^[[:space:]]*[­-][[:space:]]*$", text)
 		if matched {
 			result = strings.TrimSpace(result)
 			joinNextLine = true
@@ -31,7 +31,7 @@ func main() {
 			joinNextLine = false
 		}
 
-		re := regexp.MustCompile("-[[:space:]]+$")
+		re := regexp.MustCompile("[­-][[:space:]]+$")
 		text = re.ReplaceAllString(text, "")
 
 		re = regexp.MustCompile("[[:space:]]+")
