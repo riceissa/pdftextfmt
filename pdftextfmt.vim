@@ -13,7 +13,7 @@ normal! "+P
 " Remove inconsistent spacing
 :%s/\s\+/ /ge
 
-" Add a blank line at the end of the so the next command doesn't fail
+" Add a blank line at the end of the buffer so the next command doesn't fail
 normal! Go
 
 " Join paragraphs. From :help edit-paragraph-join
