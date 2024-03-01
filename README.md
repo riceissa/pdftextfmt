@@ -25,7 +25,7 @@ alias fclip='xclip -selection c -o | pdftextfmt | xclip -selection c'
 ## Instructions for installing on Windows 10/11
 
 1. Download [`pdftextfmt.vim`](https://raw.githubusercontent.com/riceissa/pdftextfmt/master/pdftextfmt.vim) and save it on your computer somewhere. Make sure the extension is `.vim`, **not** `.vim.txt`.
-2. Install Neovim. Find the location of the `nvim.exe` (not `nvim-qt.exe`) and remember it. e.g. for me it's at `"C:\Program Files\Neovim\bin\nvim.exe"`.
+2. Install [Neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md) if you don't have it. Find the location of the `nvim.exe` (not `nvim-qt.exe`) and remember it. e.g. for me it's at `"C:\Program Files\Neovim\bin\nvim.exe"`.
 3. Make a file called `pdftextfmt.cmd`. In it should be exactly one line that looks like:
 
    ```
