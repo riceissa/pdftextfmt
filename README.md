@@ -32,7 +32,7 @@ alias fclip='xclip -selection c -o | pdftextfmt | xclip -selection c'
    "C:\Program Files\Neovim\bin\nvim.exe" -S C:\Users\Issa\pdftextfmt.vim
    ```
 
-   The first part should be your `nvim.exe` path. The second part (after the `-S`) should be the path to your `pdftextfmt.vim` file from step (1).
+   The first part should be your `nvim.exe` path. The second part (after the `-S`) should be the path to your `pdftextfmt.vim` file from step (1). (You'll need to surround it in quotes if there are spaces in the path.)
 
 4. In File Explorer, right click on `pdftextfmt.cmd` and select "Create shortcut".
 5. Right click on the shortcut (**not** the `.cmd` file), and select "Properties".
