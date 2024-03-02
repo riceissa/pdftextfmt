@@ -7,8 +7,13 @@ normal! "+P
 " Remove trailing whitespace
 :%s/\s\+$//e
 
-" Join hyphens
-:%s/-$\n//e
+" Join hyphens that appear on their own line. U+00AD is the character
+" SOFT HYPHEN, which is used in some PDFs for hyphenating word-breaks between
+" lines.
+:%s/\n^\(-\|\%u00ad\)$\n//e
+
+" Join hyphens at the end of lines
+:%s/\(-\|\%u00ad\)$\n//e
 
 " Remove inconsistent spacing
 :%s/\s\+/ /ge
