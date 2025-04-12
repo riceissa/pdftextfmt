@@ -1,6 +1,10 @@
 " Paste text
 normal! "+P
 
+" Get rid of this weird unicode character (U+FFFD REPLACEMENT CHARACTER)
+" that appears in some PDFs.
+%s/�/ /ge
+
 " Remove beginning whitespace
 %s/\m^\s\+//e
 
