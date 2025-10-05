@@ -3,7 +3,7 @@ normal! "+P
 
 " Get rid of this weird unicode character (U+FFFD REPLACEMENT CHARACTER)
 " that appears in some PDFs.
-exe '%s/\m\%uFFFD/ /ge'
+%s/\m\%uFFFD/ /ge
 
 " Remove beginning whitespace
 %s/\m^\s\+//e
