@@ -39,6 +39,6 @@ g/\m^$/delete
 normal! Gdddd
 
 " Copy text to clipboard
-normal! ggvGg_"+y
+normal! govGg_"+y
 
 quit!
