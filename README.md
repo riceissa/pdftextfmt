@@ -1,31 +1,23 @@
 # pdftextfmt
 
-Format text copied from PDF files.
-
-    $ go build pdftextfmt.go
-    $ cat <<'EOF' | ./pdftextfmt
-    > This text has  uneven spacing,
-    > hyphen-
-    > ation, and trailing whitespace.  
-    > EOF
-    This text has uneven spacing, hyphenation, and trailing whitespace.
-
-Mappings for Vim:
-
-    nnoremap Q Vip:!pdftextfmt<CR>gqq
-    vnoremap Q :!pdftextfmt<CR>gqq
-
-In Bash I like the following:
+Use this script like this:
 
 ```bash
-# Filter clipboard: clean linebreaks in copied text
-alias fclip='xclip -selection c -o | pdftextfmt | xclip -selection c'
+nvim -S pdftextfmt.vim
 ```
+
+You can then bind this command to a keybinding using your OS, so that you can
+easily run this command after copying text from a PDF.
+
+Using Vim instead of Neovim also works, but make sure the specific version of
+Vim you use has clipboard access. Try `vim --version | grep clipboard` and make
+sure it says `+clipboard` or `+wayland_clipboard` or `+xterm_clipboard` or
+something, and _doesn't_ says `-clipboard`.
 
 ## Instructions for installing on Windows 10/11
 
-1. Download [`pdftextfmt.vim`](https://raw.githubusercontent.com/riceissa/pdftextfmt/master/pdftextfmt.vim) and save it on your computer somewhere. Make sure the extension is `.vim`, **not** `.vim.txt`.
-2. Install [Neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md) if you don't have it. Find the location of the `nvim.exe` (not `nvim-qt.exe`) and remember it. e.g. for me it's at `"C:\Program Files\Neovim\bin\nvim.exe"`.
+1. Download [`pdftextfmt.vim`](https://raw.githubusercontent.com/riceissa/pdftextfmt/master/pdftextfmt.vim) and save it on your computer somewhere. Make sure the extension is `.vim`, **not** `.vim.txt`. You might be able to do this in File Explorer by naming the file `pdftextfmt.vim.` with the trailing `.`.
+2. [Install Neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md) if you don't have it. Find the location of the `nvim.exe` (not `nvim-qt.exe`) and remember it. e.g. for me it's at `"C:\Program Files\Neovim\bin\nvim.exe"`.
 3. Make a file called `pdftextfmt.cmd`. In it should be exactly one line that looks like:
 
    ```
