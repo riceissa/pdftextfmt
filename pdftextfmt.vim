@@ -1,6 +1,10 @@
 " Paste text
 normal! "+P
 
+" Sometimes, carriage returns show up in copied text, so first normalize by
+" converting these to regular newlines.
+%s/\r/\r/ge
+
 " Get rid of this weird unicode character (U+FFFD REPLACEMENT CHARACTER)
 " that appears in some PDFs.
 %s/\m\%uFFFD/ /ge
