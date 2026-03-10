@@ -1,8 +1,9 @@
 " Paste text
 normal! "+P
 
-" Sometimes, carriage returns show up in copied text, so first normalize by
-" converting these to regular newlines.
+" Sometimes, carriage returns show up in copied text. (This happens, for
+" instance, with Edge on Linux.) So first normalize by converting these to
+" spaces.
 %s/\r/ /ge
 
 " Get rid of this weird unicode character (U+FFFD REPLACEMENT CHARACTER)
