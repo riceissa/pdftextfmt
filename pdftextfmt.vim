@@ -46,4 +46,9 @@ normal! Gdddd
 " Copy text to clipboard
 normal! govGg_"+y
 
+" For some reason the resulting text does not get copied to the clipboard on
+" Ubuntu 26.04 when Neovim quits too soon. Adding a small sleep seems to fix
+" this problem.
+sleep 30m
+
 quit!
